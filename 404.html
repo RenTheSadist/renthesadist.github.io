@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="/grace/favicon.png?v=21" type="image/png" />
+    <link rel="apple-touch-icon" href="/grace/apple-touch-icon.png?v=21" />
+    <title>은혜와진리교회</title>
+    <script>
+      (function () {
+        var path = window.location.pathname || "/";
+        var search = window.location.search || "";
+        var route = path.replace(/^\/(grace|gntc|church)(\/|$)/i, "/");
+        if (!route.startsWith("/")) route = "/" + route;
+        var base = path.match(/^\/(grace|gntc|church)(\/|$)/i);
+        var gatewayRoot = base ? "/" + base[1] + "/" : "/grace/";
+        var target = gatewayRoot + "?route=" + encodeURIComponent(route + search);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body style="margin:0;background:#ffffff;">
+    <div style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#ffffff;">
+      <img src="/grace/logo-emblem.png?v=21" alt="은혜와진리교회" style="width:112px;height:112px;object-fit:contain;user-select:none;-webkit-user-drag:none;" draggable="false" />
+    </div>
+  </body>
+</html>
